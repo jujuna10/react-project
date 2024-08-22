@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Matemasie&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+#logo{
+  width: 100px;
+}
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.register{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.register button{
+  width: 80px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+#in{
+  background-color: white;
+}
+#up{
+  background-color: rgb(232, 248, 255);
+}
+#up:hover{
+  background-color: rgb(136, 204, 233);
+  transition-duration: .2s;
+}
+#in:hover{
+  background-color: rgb(136, 204, 233);
+  transition-duration: .2s;
+}
+#hero-photo{
+  width: 100%;
+  height: 700px;
+  position: relative;
+}
+.effect{
+  position: absolute;
+  top: 320px;
+  left: 1200px;
+  color: white;
+  max-width: 400px;
+
+}
+#country-dropdown{
+  position: absolute;
+}
+.countrys{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+
+}
+#country{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  gap: 20px;
+  column-gap: 50px;
+  justify-items: center;
+  align-items: center;
+}
+.btn{
+  width: 180px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  background-color: white;
+  border: 1px solid rgb(216, 190, 190);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn:hover{
+  color: rgb(68, 162, 199);
+}
+#choose{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#all-country{
+  color: rgb(163, 163, 255);
+}
+#choose p{
+  font-size: 20px;
+}
+.download{
+  display: flex;
+  gap: 200px;
+  padding: 100px 300px 100px 300px;
+  background-color: rgb(242, 243, 245);
+}
+.title{
+  font-size: 35px;
+  font-weight: 900;
+  max-width: 320px;
+  font-family: Matemasie;
+}
+.text{
+  max-width: 450px;
+  font-size: 20px;
+  color: rgb(114, 115, 117);
+}
+.download-app{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.app,.google{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: black;
+  width: 200px;
+  border-radius: 10px;
+  padding: 2px;
+}
+#downl{
+  color: white;
+}
+#store{
+  font-size: 20px;
+  color: white;
+}
+.all{
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.form{
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  width: 500px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  margin: 0 auto;
+}
+.rame{
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  position: fixed; 
+  top: 0;
+  opacity: .5;
+  background-color: black;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  z-index: 999;
+}
+input{
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 10px;
+}
+#create{
+  font-size: 20px;
+  font-family: Matemasie;
+}
+.google2{
+  width: 460px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.google2 span,.appleLogo span,.facebook span{
+  font-weight: 900;
+}
+.appleLogo{
+  background-color: black;
+  color: white;
+  width: 460px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.appleLogo img{
+  filter: invert(100%);
+}
+.facebook{
+  background-color: rgb(56, 117, 234);
+  color: white;
+  width: 460px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 100px;
+  border: 2px solid rgb(56, 117, 234);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.buttons div:hover{
+  transition-duration: .2s;
+  opacity: 0.8;
+}
