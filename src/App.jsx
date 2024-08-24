@@ -18,7 +18,7 @@ function App() {
     <div className='allComponent'>
       <div className="regi">
         <Header value={[click, setClick]} name={name} setOut={setOut} setName={setName} />
-        <Registre value={[click, setClick]} setName={setName} showProfile={[show,setShow]} />
+        <Registre value={[click, setClick]} setName={setName} />
         <Out value2={[out, setOut]}  showProfile={[show,setShow]} />
       </div>
       <div className='main'>

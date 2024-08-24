@@ -4,18 +4,16 @@ import google from '../assets/google2.png';
 import apple from '../assets/apple.png';
 import facebook from '../assets/communication.png';
 
-export default function Registre({ value, setName, showProfile}) {
+export default function Registre({ value, setName,  }) {
   const [inputValue, setInputValue] = useState("");
-  const [show,setShow] = showProfile
+  // const [show,setShow] = showProfile
 
-  const handleShow = () => {
-    setShow(!show)
-  }
+  
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setName(inputValue);
-    value[1](false); // Close the registration form
+    e.preventDefault()
+    setName(inputValue)
+    value[1](false)
   };
 
   useEffect(() => {
@@ -68,7 +66,7 @@ export default function Registre({ value, setName, showProfile}) {
               <input type="email" name="email" id="email" required />
               <label className='placeholder'>Email</label>
             </div>
-            <button type='submit' onClick={handleShow}>Next</button>
+            <button type='submit'>Next</button>
           </div>
         </form>
       </div>

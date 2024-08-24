@@ -28,6 +28,8 @@ function Header(props) {
     setOut(!out)
   }
 
+  console.log(props.name)
+
   return (
     <div className="navbar">
       <img src={logo} alt="logo" id="logo"/>

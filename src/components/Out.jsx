@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Out({value2,showProfile}) {
     
@@ -7,14 +7,27 @@ export default function Out({value2,showProfile}) {
 
     const handleNo = () => {
         setOut(false)
-        setShow(false)
+        // setShow(false)
     }
-
+    
     const handleYes = () => {
         setOut(false)
         setShow(!show)
-        
     }
+
+
+    useEffect(() => {
+        
+        const timer = setTimeout(() => {
+            setShow(true)
+        },2000)
+
+        return () => clearInterval(timer)
+
+    },[show])
+
+   
+    
 
 
     return (
