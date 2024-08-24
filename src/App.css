@@ -150,6 +150,9 @@
   gap: 35px;
 }
 .form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: white;
   top: 50%;
   left: 50%;
@@ -158,7 +161,11 @@
   width: 500px;
   border-radius: 20px;
   border: 1px solid gray;
-  margin: 0 auto;
+  height: 800px;
+  gap: 20px;
+  padding: 10px;
+  z-index: 999;
+  margin: 10px;
 }
 .rame{
   width: 100vw;
@@ -169,23 +176,127 @@
   opacity: .5;
   background-color: black;
 }
-.form{
+.buttons{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  z-index: 999;
 }
-input{
-  width: 200px;
-  height: 35px;
+.inputs {
+  width: 460px;
+}
+
+.area {
+  position: relative;
+  height: 80px;
+  line-height: 80px; /* To vertically align placeholder and input */
+}
+
+.inputs input {
+  width: 100%;
+  height: 39px;
+  margin: 10px 0;
   border-radius: 10px;
   border: 1px solid gray;
-  padding: 10px;
+  padding-left: 35px;
+  outline: none;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  transition: border 0.2s ease, color 0.2s ease;
+}
+
+.placeholder {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  padding: 0 25px;
+  margin: 0 20px;
+  color: gray;
+  transition: 0.2s;
+  transform: translateY(-50%);
+  font-size: 16px; /* Default font size */
+  pointer-events: none; /* Prevents label from blocking input clicks */
+}
+
+input:focus + .placeholder,
+input:valid + .placeholder{
+  color: #66ff00;
+  top: -10px; /* Moves label up when input is focused */
+  left: 35px;
+  font-size: 18px; 
+  transform: translate(-25px, -18px) scale(0.88);
+  z-index: 2;
+}
+
+
+
+
+
+
+.inputs {
+  width: 460px;
+}
+
+.area2 {
+  position: relative;
+  height: 80px;
+  line-height: 80px; /* To vertically align placeholder and input */
+}
+
+.inputs input {
+  width: 100%;
+  height: 39px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding-left: 35px;
+  outline: none;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  transition: border 0.2s ease, color 0.2s ease;
+}
+
+.placeholder2 {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  padding: 0 25px;
+  margin: 0 20px;
+  color: gray;
+  transition: 0.2s;
+  transform: translateY(-50%);
+  font-size: 16px; /* Default font size */
+  pointer-events: none; /* Prevents label from blocking input clicks */
+}
+
+input:focus + .placeholder2,
+input:valid + .placeholder2 {
+  color: #66ff00;
+  top: -10px; /* Moves label up when input is focused */
+  left: 35px;
+  font-size: 18px; 
+  transform: translate(-25px, -18px) scale(0.88);
+  z-index: 2;
+}
+
+
+
+
+
+
+
+
+.inputs button{
+  width: 460px;
+  height: 45px;
+  border-radius: 10px;
+  border: none;
+  background-color: rgb(0, 157, 224);
+  color: white;
+  font-size: 18px;
 }
 #create{
-  font-size: 20px;
+  font-size: 29px;
   font-family: Matemasie;
 }
 .google2{
@@ -235,3 +346,98 @@ input{
   transition-duration: .2s;
   opacity: 0.8;
 }
+.continue{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  transform: translateX(4%);
+}
+.continue::before, .continue::after{
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid black;
+
+}
+.continue:not(:empty)::before{
+  margin-right: .25em;
+  justify-content: flex-start;
+  padding-left: 135px;
+  
+}
+.continue:not(:empty)::after{
+  margin-left: .25em;
+  justify-content: flex-end;
+  padding-right: 135px;
+}
+.continue p{
+  margin: 10px;
+}
+#user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+#out{
+  width: 80px;
+  height: 29px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 157, 224);
+  color: white;
+  font-size: 15px;
+
+}
+
+
+.out{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(133, 222, 219);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  position: fixed;
+  width: 500px;
+  border-radius: 20px;
+  border: 1px solid gray;
+  /* height: 120px; */
+  gap: 20px;
+  padding: 20px;
+  z-index: 999;
+  margin: 10px;
+}
+/* .rame2{
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  position: fixed; 
+  top: 0;
+  opacity: .5;
+  background-color: black;
+} */
+.butss{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.butts button{
+  width: 80px;
+  margin: 0px 20px;
+}
+#yes{
+  background-color: rgb(0, 157, 224);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+#no{
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+

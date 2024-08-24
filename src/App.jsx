@@ -4,29 +4,31 @@ import HeroSection from './components/hero'
 import City from './components/City'
 import Download from './components/Download'
 import Registre from './components/registre';
+import Out from './components/Out'
 import './App.css'
 
 function App() {
+  const [click, setClick] = useState(false);
+  const [name, setName] = useState('');
+  const [out, setOut] = useState(false);
+  const [show,setShow] = useState(false)
 
-  const [opacity,setOpasity] = useState(1)
 
-
-  const [click,setClick] = useState(false)
-
- 
   return (
     <div className='allComponent'>
-        <div className='main'>
-          <Header value={[click,setClick]}/>
-          <HeroSection />
-          <City />
-          <Download />
-        </div>
-      <div>
-        <Registre value={[click,setClick]}/>
+      <div className="regi">
+        <Header value={[click, setClick]} name={name} setOut={setOut} setName={setName} />
+        <Registre value={[click, setClick]} setName={setName} showProfile={[show,setShow]} />
+        <Out value2={[out, setOut]}  showProfile={[show,setShow]} />
+      </div>
+      <div className='main'>
+        <HeroSection />
+        <City />
+        <Download />
       </div>
     </div>
-    )
+
+  );
 }
 
-export default App
+export default App;
