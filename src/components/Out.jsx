@@ -16,15 +16,15 @@ export default function Out({value2,showProfile}) {
     }
 
 
-    useEffect(() => {
+    // useEffect(() => {
         
-        const timer = setTimeout(() => {
-            setShow(true)
-        },2000)
+    //     const timer = setTimeout(() => {
+    //         setShow(true)
+    //     },2000)
 
-        return () => clearInterval(timer)
+    //     return () => clearInterval(timer)
 
-    },[show])
+    // },[show])
 
    
     
